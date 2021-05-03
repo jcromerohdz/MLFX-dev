@@ -333,7 +333,7 @@ export default {
       loading: false,
       lineItems: [
         {
-          price: 'price_1InBZfDhvT9geSyOLlbiYCYBR', // The id of the recurring price you created in your Stripe dashboard
+          price: 'price_1InBZfDhvT9geSyOLlbiYCYB', // The id of the recurring price you created in your Stripe dashboard
           quantity: 1,
         },
       ],
