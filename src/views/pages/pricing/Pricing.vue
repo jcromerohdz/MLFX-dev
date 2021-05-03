@@ -325,7 +325,7 @@ export default {
     Ripple,
   },
   data() {
-    this.publishableKey = 'pk_live_Opmg7bqtk6CiTAWsytnVCRa600o5qP3HJ6'
+    this.publishableKey = 'pk_test_Jm72xmF3F5W4JyLyRcgimvZT00roSlmPIt'
     return {
       status: 'monthly',
       monthlyPlanShow: true,
