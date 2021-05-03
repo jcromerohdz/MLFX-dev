@@ -354,7 +354,6 @@ export default {
     },
     submit() {
       // You will be redirected to Stripe's secure checkout page
-      console.log('submit')
       this.$refs.checkoutRef.redirectToCheckout()
     },
   },

@@ -257,7 +257,6 @@ export default {
     },
     // Log the user in
     login() {
-      console.log('login')
       this.$auth.loginWithRedirect()
     },
   },
