@@ -125,10 +125,11 @@
 
               <!-- submit buttons -->
               <b-button
+                v-if="!$auth.isAuthenticated"
                 type="submit"
                 variant="primary"
                 block
-                @click="validationForm"
+                @click="login"
               >
                 Sign in
               </b-button>
@@ -253,6 +254,11 @@ export default {
           })
         }
       })
+    },
+    // Log the user in
+    login() {
+      console.log('login')
+      this.$auth.loginWithRedirect()
     },
   },
 }

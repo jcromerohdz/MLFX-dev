@@ -22,6 +22,13 @@
     </div>
 
     <b-navbar-nav class="nav align-items-center ml-auto">
+      <button
+        v-if="!$auth.isAuthenticated"
+        class="btn btn-outline-dark"
+        @click="login"
+      >
+        Login
+      </button>
       <b-nav-item-dropdown
         right
         toggle-class="d-flex align-items-center dropdown-user-link"
@@ -30,7 +37,7 @@
         <template #button-content>
           <div class="d-sm-flex d-none user-nav">
             <p class="user-name font-weight-bolder mb-0">
-              John Doe
+              {{ $auth.user.name }}
             </p>
             <span class="user-status">Admin</span>
           </div>
@@ -38,7 +45,7 @@
             size="40"
             variant="light-primary"
             badge
-            :src="require('@/assets/images/avatars/13-small.png')"
+            :src="$auth.user.picture"
             class="badge-minimal"
             badge-variant="success"
           />
@@ -88,7 +95,10 @@
             icon="LogOutIcon"
             class="mr-50"
           />
-          <span>Logout</span>
+          <span
+            v-if="$auth.isAuthenticated"
+            @click="logout"
+          >Logout</span>
         </b-dropdown-item>
       </b-nav-item-dropdown>
     </b-navbar-nav>
@@ -117,6 +127,18 @@ export default {
     toggleVerticalMenuActive: {
       type: Function,
       default: () => {},
+    },
+  },
+  methods: {
+    // Log the user in
+    login() {
+      this.$auth.loginWithRedirect()
+    },
+    // Log the user out
+    logout() {
+      this.$auth.logout({
+        returnTo: window.location.origin,
+      })
     },
   },
 }

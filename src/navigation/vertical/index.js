@@ -24,5 +24,10 @@ export default [
     route: 'dashboard-analytics',
     icon: 'PieChartIcon',
   },
+  {
+    title: 'Pricing',
+    route: 'pages-pricing',
+    icon: 'PieChartIcon',
+  },
 
 ]

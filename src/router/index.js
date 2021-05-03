@@ -11,7 +11,7 @@ const router = new VueRouter({
   },
   routes: [
     {
-      path: '/home',
+      path: '/',
       name: 'home',
       component: () => import('@/views/Home.vue'),
       meta: {
@@ -95,7 +95,12 @@ const router = new VueRouter({
       },
     },
     {
-      path: '/',
+      path: '/pages/pricing',
+      name: 'pages-pricing',
+      component: () => import('@/views/pages/pricing/Pricing.vue'),
+    },
+    {
+      path: '/login',
       name: 'login',
       component: () => import('@/views/Login.vue'),
       meta: {

@@ -3,6 +3,7 @@
     <component
       :is="resolveNavItemComponent(item)"
       v-for="item in items"
+      v-show="$auth.isAuthenticated"
       :key="item.header || item.title"
       :item="item"
     />
