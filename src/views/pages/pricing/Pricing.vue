@@ -337,8 +337,8 @@ export default {
           quantity: 1,
         },
       ],
-      successURL: 'http://localhost:8080/analysis',
-      cancelURL: 'http://localhost:8080/second-page',
+      successURL: 'https://inspiring-swanson-92653f.netlify.app/trading',
+      cancelURL: 'https://inspiring-swanson-92653f.netlify.app/dashboard/analyticse',
     }
   },
   created() {
